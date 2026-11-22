@@ -147,6 +147,13 @@ O passo a passo e os comandos estão na seção em inglês acima. Os detalhes do
 
 Conversão feita com auxílio do Claude Opus (Anthropic).
 
+## Support / Apoio
+
+If these tools or the format documentation helped you, you can support their development:
+[buymeacoffee.com/dinhow](https://buymeacoffee.com/dinhow). Support is for the tools and the research only. No car files are offered in return.
+
+Se as ferramentas ou a documentação te ajudaram, você pode apoiar o desenvolvimento pelo link acima. O apoio é pelas ferramentas e pela pesquisa, sem troca de arquivos de carro.
+
 ## License
 
 The code is under the MIT license (see `LICENSE`). Game files, car models and textures belong to their respective owners and are **not** part of this repository.
