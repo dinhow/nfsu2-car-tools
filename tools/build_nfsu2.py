@@ -18,6 +18,8 @@ from mathutils import Vector
 
 args = sys.argv[sys.argv.index("--") + 1:]
 KN5, TEXDIR, OUT = args[0], args[1], args[2]
+# --budget=0.45 reduz o orcamento de triangulos (menos peso de FPS); 1.0 = padrao
+BUDGET_SCALE = float(next((a.split("=", 1)[1] for a in args if a.startswith("--budget=")), 1.0))
 os.makedirs(OUT, exist_ok=True)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kn5_export import parse, xform, xnorm  # noqa: E402
@@ -360,7 +362,7 @@ for p, ob in list(parts.items()):
         o2.name = o2.data.name = name
         bpy.data.collections[f"LOD_{lod}"].objects.link(o2)
         if p not in PLACEHOLDERS:
-            target = BUDGET_A.get(p, 2000) * fac
+            target = BUDGET_A.get(p, 2000) * fac * BUDGET_SCALE
             ratio = min(1.0, target / max(src_tris, 1))
             if ratio < 1.0:
                 mod = o2.modifiers.new("dec", "DECIMATE")

@@ -90,6 +90,8 @@ python tools/validate.py "<game>" out_game/CARS/SENTRA/GEOMETRY.BIN out_game/CAR
 powershell -ExecutionPolicy Bypass -File scripts/install.ps1 -Game "<game>"
 ```
 
+**Performance:** NFSU2 renders on a single thread, so heavy models can cost FPS on weaker PCs. Add `--budget=0.45` to the `build_nfsu2.py` command to get a lighter car with the same look. For the Sentra, LOD A drops from about 51k to 23k triangles and `GEOMETRY.BIN` from 14.3 MB to 9.5 MB.
+
 Always point `GEOMETRY.BIN` and `TEXTURES.BIN` to the **original** files (for example the backup made by `install.ps1`), never to an already modified copy.
 
 Some values in `build_nfsu2.py` and `compile_sentra.py` are specific to the Sentra B16 source model: mesh names, wheel centers and the grille region. To convert another car, adjust those values.
