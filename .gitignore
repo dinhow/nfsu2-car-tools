@@ -1,0 +1,35 @@
+# Nunca versionar arquivos de jogo nem modelos/texturas de terceiros.
+# Never commit game files or third-party models/textures.
+
+# arquivos do jogo e formatos de modelo
+*.BIN
+*.bin
+*.BUN
+*.bun
+*.lzc
+*.LZC
+*.kn5
+*.acd
+*.dds
+*.tpk
+
+# saidas geradas (contem o modelo convertido)
+export/
+nfsu2_build/
+out_game/
+pacote/
+preview/
+*.blend
+*.blend1
+*.obj
+*.mtl
+*.fbx
+*.json
+
+# imagens: so os prints de documentacao
+*.png
+*.jpg
+!docs/screenshots/*.png
+
+__pycache__/
+*.pyc
