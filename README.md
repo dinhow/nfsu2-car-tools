@@ -4,6 +4,12 @@
 
 The first car converted with it is the **Nissan Sentra SE-R Spec V B16 (2007–2012)**, which replaces the stock B15 Sentra. The project is a **work in progress**, and I'm looking for someone who wants to continue it. *Versão em português abaixo.*
 
+### Why this exists
+
+I own a real Sentra B16 and wanted to drive it in NFSU2, the game I grew up with. There was no ready-made way to do it, so I built these tools with the help of AI (Claude Opus). This is how I managed to get my car into the game.
+
+**If you want your own car in the game, do what I did:** use these tools, and ask an AI for help with your mod. Most of the hard work here (decoding the file formats, finding out how the game loads textures, fitting the kits) was done that way, step by step, testing in the game.
+
 **Generic parts** (work for any car):
 - KN5 reader
 - GEOMETRY.BIN and TEXTURES.BIN reader and writer
@@ -97,6 +103,10 @@ Converted with the help of Claude Opus (Anthropic).
 **Conversor de mods de carro do Assetto Corsa (`.kn5`) para o NFSU2 de PC.** Ele reconstrói o `GEOMETRY.BIN` e o `TEXTURES.BIN` do próprio jogo, sem ZModeler.
 
 O primeiro carro convertido é o **Nissan Sentra SE-R Spec V B16 (2007–2012)**, no lugar do Sentra B15 original. O projeto está **em andamento**, e procuro alguém que queira continuá-lo.
+
+**Por que isso existe:** eu tenho um Sentra B16 de verdade e quis colocá-lo dentro do NFSU2. Não havia um jeito pronto, então fiz estas ferramentas com auxílio de IA (Claude Opus). Foi a maneira que consegui.
+
+**Quem quiser o próprio carro no jogo, faça como eu:** use as ferramentas e peça auxílio da IA para seus mods. A parte difícil foi feita assim, passo a passo e testando no jogo: decifrar os formatos, descobrir como o jogo carrega as texturas e adaptar os kits.
 
 **Já serve para qualquer carro:**
 - leitor de KN5
