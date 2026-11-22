@@ -240,8 +240,13 @@ def under_copy(src, name):
     bm = bmesh.new()
     bm.from_mesh(ob.data)
     bmesh.ops.reverse_faces(bm, faces=bm.faces)
+    # 4 mm causava z-fighting na camera do jogo (manchas escuras no capo): 2 cm abaixo e um pouco menor
+    cx = sum(v.co.x for v in bm.verts) / len(bm.verts)
+    cy = sum(v.co.y for v in bm.verts) / len(bm.verts)
     for v in bm.verts:
-        v.co.z -= 0.004
+        v.co.x = cx + (v.co.x - cx) * 0.98
+        v.co.y = cy + (v.co.y - cy) * 0.98
+        v.co.z -= 0.02
     bm.to_mesh(ob.data)
     bm.free()
     return ob
