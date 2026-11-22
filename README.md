@@ -1,15 +1,30 @@
-# nfsu2-car-tools
+# nfsu2-car-tools: Assetto Corsa → NFSU2 car converter
 
-**Tools to convert a car model into Need for Speed: Underground 2 (PC)**, rebuilding the game's own `GEOMETRY.BIN` and `TEXTURES.BIN`. No ZModeler needed.
+**Converts Assetto Corsa car mods (`.kn5`) into Need for Speed: Underground 2 (PC) cars**, rebuilding the game's own `GEOMETRY.BIN` and `TEXTURES.BIN`. No ZModeler needed.
 
-Built while converting the **Nissan Sentra SE-R Spec V B16 (2007–2012)** to replace the stock B15 Sentra. The project is a **work in progress**, and I'm looking for someone who wants to continue it. *Versão em português abaixo.*
+The first car converted with it is the **Nissan Sentra SE-R Spec V B16 (2007–2012)**, which replaces the stock B15 Sentra. The project is a **work in progress**, and I'm looking for someone who wants to continue it. *Versão em português abaixo.*
+
+**Generic parts** (work for any car):
+- KN5 reader
+- GEOMETRY.BIN and TEXTURES.BIN reader and writer
+- JDLZ texture compression
+- CarTypeInfo wheel patch
+- Kit morphing
+- Validation
+
+**Still Sentra-specific** (to be generalized):
+- The mesh names used to split the model into parts
+- The wheel centers
+- The grille region
+- The B16 front bumper variants
 
 | | |
 |---|---|
 | ![side](docs/screenshots/side_front.png) | ![front](docs/screenshots/front_grille_lights.png) |
 | ![rear](docs/screenshots/rear_badges_exhaust.png) | ![rear 3/4](docs/screenshots/rear_three_quarter.png) |
 
-> **No game files, car models or textures are included.** You need your own NFSU2 installation and a source car model you are allowed to use. The tools generate everything locally on your machine.
+> **No game files, car models or textures are included.** You need your own NFSU2 installation and an Assetto Corsa car mod you are allowed to use. The tools generate everything locally on your machine.
+> **Respect the mod authors:** only convert models you have the right to use, and don't redistribute the generated car files without the original author's permission.
 
 ## What works (tested offline on PC)
 
@@ -28,6 +43,10 @@ Built while converting the **Nissan Sentra SE-R Spec V B16 (2007–2012)** to re
 - **Real bodykits and widebody:** these need proper hand modeling.
 - **Collision outlines:** the `CV` records are still the B15 ones.
 - **Browser version:** test and adapt for NFSU2 Revived.
+- **Generalize the converter for any AC car:**
+  - automatic part classification from the mesh names;
+  - wheel centers read from the model;
+  - a config file per car instead of values in the code.
 
 ## How it works
 
@@ -75,11 +94,25 @@ Converted with the help of Claude Opus (Anthropic).
 
 ## Português
 
-**Ferramentas para converter um modelo de carro para o NFSU2 de PC**, reconstruindo o `GEOMETRY.BIN` e o `TEXTURES.BIN` do próprio jogo, sem ZModeler.
+**Conversor de mods de carro do Assetto Corsa (`.kn5`) para o NFSU2 de PC.** Ele reconstrói o `GEOMETRY.BIN` e o `TEXTURES.BIN` do próprio jogo, sem ZModeler.
 
-Elas foram feitas convertendo o **Nissan Sentra SE-R Spec V B16 (2007–2012)** no lugar do Sentra B15 original. O projeto está **em andamento**, e procuro alguém que queira continuá-lo.
+O primeiro carro convertido é o **Nissan Sentra SE-R Spec V B16 (2007–2012)**, no lugar do Sentra B15 original. O projeto está **em andamento**, e procuro alguém que queira continuá-lo.
 
-**Nenhum arquivo do jogo, modelo ou textura está incluído.** Você precisa do seu NFSU2 e de um modelo de origem que possa usar. As ferramentas geram tudo localmente.
+**Já serve para qualquer carro:**
+- leitor de KN5
+- leitor e gravador de GEOMETRY.BIN e TEXTURES.BIN
+- compressão das texturas
+- patch das rodas
+- adaptação de kits
+- validação
+
+**Ainda é específico do Sentra:**
+- separação das peças pelos nomes das malhas
+- centros das rodas
+- região da grade
+- para-choques do B16
+
+**Nenhum arquivo do jogo, modelo ou textura está incluído.** Você precisa do seu NFSU2 e de um mod de carro do AC que tenha direito de usar. As ferramentas geram tudo localmente. Respeite os autores dos mods: não redistribua os arquivos convertidos sem autorização do autor original.
 
 **O que funciona:**
 - Carroceria do B16 com 3 níveis de detalhe.
@@ -96,6 +129,7 @@ Elas foram feitas convertendo o **Nissan Sentra SE-R Spec V B16 (2007–2012)** 
 - Body kits modelados à mão.
 - Contornos de colisão.
 - Testar na versão de navegador (NFSU2 Revived).
+- Generalizar para qualquer carro do AC, com classificação automática das peças e um arquivo de configuração por carro.
 
 O passo a passo e os comandos estão na seção em inglês acima. Os detalhes do formato estão em [docs/FORMAT.md](docs/FORMAT.md).
 
