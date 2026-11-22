@@ -28,6 +28,8 @@ I own a real Sentra B16 and wanted to drive it in NFSU2. There was no ready-made
 |---|---|
 | ![side](docs/screenshots/side_front.png) | ![front](docs/screenshots/front_grille_lights.png) |
 | ![rear](docs/screenshots/rear_badges_exhaust.png) | ![rear 3/4](docs/screenshots/rear_three_quarter.png) |
+| ![race tunnel](docs/screenshots/race_tunnel_front.png) | ![race night](docs/screenshots/race_night_rear.png) |
+| ![garage side](docs/screenshots/garage_side.png) | ![garage front](docs/screenshots/garage_front_three_quarter.png) |
 
 > **No game files, car models or textures are included.** You need your own NFSU2 installation and an Assetto Corsa car mod you are allowed to use. The tools generate everything locally on your machine.
 > **Respect the mod authors:** only convert models you have the right to use, and don't redistribute the generated car files without the original author's permission.
