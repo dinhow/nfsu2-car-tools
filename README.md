@@ -6,7 +6,7 @@ The first car converted with it is the **Nissan Sentra SE-R Spec V B16 (2007–2
 
 ### Why this exists
 
-I own a real Sentra B16 and wanted to drive it in NFSU2, the game I grew up with. There was no ready-made way to do it, so I built these tools with the help of AI (Claude Opus). This is how I managed to get my car into the game.
+I own a real Sentra B16 and wanted to drive it in NFSU2. There was no ready-made way to do it, so I built these tools with the help of AI (Claude Opus). This is how I managed to get my car into the game.
 
 **If you want your own car in the game, do what I did:** use these tools, and ask an AI for help with your mod. Most of the hard work here (decoding the file formats, finding out how the game loads textures, fitting the kits) was done that way, step by step, testing in the game.
 
