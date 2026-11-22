@@ -1,8 +1,8 @@
-# nfsu2-car-tools: Assetto Corsa → NFSU2 car converter
+﻿# nfsu2-car-tools: Assetto Corsa â†’ NFSU2 car converter
 
 **Converts Assetto Corsa car mods (`.kn5`) into Need for Speed: Underground 2 (PC) cars**, rebuilding the game's own `GEOMETRY.BIN` and `TEXTURES.BIN`. No ZModeler needed.
 
-The first car converted with it is the **Nissan Sentra SE-R Spec V B16 (2007–2012)**, which replaces the stock B15 Sentra. The project is a **work in progress**, and I'm looking for someone who wants to continue it. *Versão em português abaixo.*
+The first car converted with it is the **Nissan Sentra SE-R Spec V B16 (2007â€“2012)**, which replaces the stock B15 Sentra. The project is a **work in progress**, and I'm looking for someone who wants to continue it. *VersÃ£o em portuguÃªs abaixo.*
 
 ### Why this exists
 
@@ -90,7 +90,7 @@ python tools/validate.py "<game>" out_game/CARS/SENTRA/GEOMETRY.BIN out_game/CAR
 powershell -ExecutionPolicy Bypass -File scripts/install.ps1 -Game "<game>"
 ```
 
-**Performance:** NFSU2 renders on a single thread, so heavy models can cost FPS on weaker PCs. Add `--budget=0.45` to the `build_nfsu2.py` command to get a lighter car with the same look. For the Sentra, LOD A drops from about 51k to 23k triangles and `GEOMETRY.BIN` from 14.3 MB to 9.5 MB.
+**Performance:** NFSU2 renders on a single thread, so heavy models can cost FPS on weaker PCs. Add `--budget=0.45` to the `build_nfsu2.py` command to get a lighter car with the same look. For the Sentra, LOD A drops from about 51k to 29k triangles and `GEOMETRY.BIN` from 14.3 MB to 9.9 MB. The hood, roof and glass keep full detail, because large smooth surfaces show facets in reflections.
 
 Always point `GEOMETRY.BIN` and `TEXTURES.BIN` to the **original** files (for example the backup made by `install.ps1`), never to an already modified copy.
 
@@ -102,59 +102,59 @@ Converted with the help of Claude Opus (Anthropic).
 
 ---
 
-## Português
+## PortuguÃªs
 
-**Conversor de mods de carro do Assetto Corsa (`.kn5`) para o NFSU2 de PC.** Ele reconstrói o `GEOMETRY.BIN` e o `TEXTURES.BIN` do próprio jogo, sem ZModeler.
+**Conversor de mods de carro do Assetto Corsa (`.kn5`) para o NFSU2 de PC.** Ele reconstrÃ³i o `GEOMETRY.BIN` e o `TEXTURES.BIN` do prÃ³prio jogo, sem ZModeler.
 
-O primeiro carro convertido é o **Nissan Sentra SE-R Spec V B16 (2007–2012)**, no lugar do Sentra B15 original. O projeto está **em andamento**, e procuro alguém que queira continuá-lo.
+O primeiro carro convertido Ã© o **Nissan Sentra SE-R Spec V B16 (2007â€“2012)**, no lugar do Sentra B15 original. O projeto estÃ¡ **em andamento**, e procuro alguÃ©m que queira continuÃ¡-lo.
 
-**Por que isso existe:** eu tenho um Sentra B16 de verdade e quis colocá-lo dentro do NFSU2. Não havia um jeito pronto, então fiz estas ferramentas com auxílio de IA (Claude Opus). Foi a maneira que consegui.
+**Por que isso existe:** eu tenho um Sentra B16 de verdade e quis colocÃ¡-lo dentro do NFSU2. NÃ£o havia um jeito pronto, entÃ£o fiz estas ferramentas com auxÃ­lio de IA (Claude Opus). Foi a maneira que consegui.
 
-**Quem quiser o próprio carro no jogo, faça como eu:** use as ferramentas e peça auxílio da IA para seus mods. A parte difícil foi feita assim, passo a passo e testando no jogo: decifrar os formatos, descobrir como o jogo carrega as texturas e adaptar os kits.
+**Quem quiser o prÃ³prio carro no jogo, faÃ§a como eu:** use as ferramentas e peÃ§a auxÃ­lio da IA para seus mods. A parte difÃ­cil foi feita assim, passo a passo e testando no jogo: decifrar os formatos, descobrir como o jogo carrega as texturas e adaptar os kits.
 
-**Já serve para qualquer carro:**
+**JÃ¡ serve para qualquer carro:**
 - leitor de KN5
 - leitor e gravador de GEOMETRY.BIN e TEXTURES.BIN
-- compressão das texturas
+- compressÃ£o das texturas
 - patch das rodas
-- adaptação de kits
-- validação
+- adaptaÃ§Ã£o de kits
+- validaÃ§Ã£o
 
-**Ainda é específico do Sentra:**
-- separação das peças pelos nomes das malhas
+**Ainda Ã© especÃ­fico do Sentra:**
+- separaÃ§Ã£o das peÃ§as pelos nomes das malhas
 - centros das rodas
-- região da grade
+- regiÃ£o da grade
 - para-choques do B16
 
-**Nenhum arquivo do jogo, modelo ou textura está incluído.** Você precisa do seu NFSU2 e de um mod de carro do AC que tenha direito de usar. As ferramentas geram tudo localmente. Respeite os autores dos mods: não redistribua os arquivos convertidos sem autorização do autor original.
+**Nenhum arquivo do jogo, modelo ou textura estÃ¡ incluÃ­do.** VocÃª precisa do seu NFSU2 e de um mod de carro do AC que tenha direito de usar. As ferramentas geram tudo localmente. Respeite os autores dos mods: nÃ£o redistribua os arquivos convertidos sem autorizaÃ§Ã£o do autor original.
 
 **O que funciona:**
-- Carroceria do B16 com 3 níveis de detalhe.
-- Pintura, faróis e lanternas acendendo, faróis de milha, grade e emblemas.
-- Rodas aftermarket, aerofólios, entrada de ar no teto e retrovisores.
+- Carroceria do B16 com 3 nÃ­veis de detalhe.
+- Pintura, farÃ³is e lanternas acendendo, farÃ³is de milha, grade e emblemas.
+- Rodas aftermarket, aerofÃ³lios, entrada de ar no teto e retrovisores.
 - 8 para-choques dianteiros baseados no B16.
 - Demais kits do jogo adaptados ao formato do B16.
-- Posição das rodas ajustada para o entre-eixos maior.
+- PosiÃ§Ã£o das rodas ajustada para o entre-eixos maior.
 
 **O que falta:**
 - Vinis.
-- Rodas próprias do B16, que hoje aparecem espelhadas.
-- Faróis e lanternas de estilo.
-- Body kits modelados à mão.
-- Contornos de colisão.
-- Testar na versão de navegador (NFSU2 Revived).
-- Generalizar para qualquer carro do AC, com classificação automática das peças e um arquivo de configuração por carro.
+- Rodas prÃ³prias do B16, que hoje aparecem espelhadas.
+- FarÃ³is e lanternas de estilo.
+- Body kits modelados Ã  mÃ£o.
+- Contornos de colisÃ£o.
+- Testar na versÃ£o de navegador (NFSU2 Revived).
+- Generalizar para qualquer carro do AC, com classificaÃ§Ã£o automÃ¡tica das peÃ§as e um arquivo de configuraÃ§Ã£o por carro.
 
-O passo a passo e os comandos estão na seção em inglês acima. Os detalhes do formato estão em [docs/FORMAT.md](docs/FORMAT.md).
+O passo a passo e os comandos estÃ£o na seÃ§Ã£o em inglÃªs acima. Os detalhes do formato estÃ£o em [docs/FORMAT.md](docs/FORMAT.md).
 
-Conversão feita com auxílio do Claude Opus (Anthropic).
+ConversÃ£o feita com auxÃ­lio do Claude Opus (Anthropic).
 
 ## Support / Apoio
 
 If these tools or the format documentation helped you, you can support their development:
 [buymeacoffee.com/dinhow](https://buymeacoffee.com/dinhow). Support is for the tools and the research only. No car files are offered in return.
 
-Se as ferramentas ou a documentação te ajudaram, você pode apoiar o desenvolvimento pelo link acima. O apoio é pelas ferramentas e pela pesquisa, sem troca de arquivos de carro.
+Se as ferramentas ou a documentaÃ§Ã£o te ajudaram, vocÃª pode apoiar o desenvolvimento pelo link acima. O apoio Ã© pelas ferramentas e pela pesquisa, sem troca de arquivos de carro.
 
 ## License
 

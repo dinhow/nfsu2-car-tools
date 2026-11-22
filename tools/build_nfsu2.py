@@ -362,7 +362,9 @@ for p, ob in list(parts.items()):
         o2.name = o2.data.name = name
         bpy.data.collections[f"LOD_{lod}"].objects.link(o2)
         if p not in PLACEHOLDERS:
-            target = BUDGET_A.get(p, 2000) * fac * BUDGET_SCALE
+            # superficies grandes e lisas (capo, teto, vidros) mostram facetas no reflexo: ficam com orcamento cheio
+            scale = 1.0 if p in ("HOOD", "ROOF", "BASE") else BUDGET_SCALE
+            target = BUDGET_A.get(p, 2000) * fac * scale
             ratio = min(1.0, target / max(src_tris, 1))
             if ratio < 1.0:
                 mod = o2.modifiers.new("dec", "DECIMATE")
